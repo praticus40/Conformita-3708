@@ -1,0 +1,64 @@
+# Coordinate overlay (punti basso-sinistra, unità pt, pagina A4 ~595x842)
+# Calibrazione iniziale — affinare visivamente in Anteprima PDF
+fields:
+  - key: comuneImpianto
+    page: 1
+    x: 120
+    y: 720
+    fontSize: 11
+  - key: provincia
+    page: 1
+    x: 120
+    y: 705
+    fontSize: 11
+  - key: protocollo
+    page: 1
+    x: 120
+    y: 690
+    fontSize: 11
+  - key: descrizioneImpianto
+    page: 1
+    x: 80
+    y: 620
+    fontSize: 10
+    maxWidth: 460
+  - key: indirizzoImpianto
+    page: 1
+    x: 120
+    y: 580
+    fontSize: 11
+  - key: committenteNome
+    page: 1
+    x: 120
+    y: 555
+    fontSize: 11
+  - key: impresaRagioneSociale
+    page: 1
+    x: 120
+    y: 530
+    fontSize: 11
+  - key: legaleRappresentante
+    page: 2
+    x: 180
+    y: 750
+    fontSize: 10
+  - key: impresaRagioneSociale
+    page: 2
+    x: 300
+    y: 735
+    fontSize: 10
+  - key: committenteNome
+    page: 2
+    x: 160
+    y: 520
+    fontSize: 10
+  - key: indirizzoImpianto
+    page: 2
+    x: 120
+    y: 480
+    fontSize: 10
+  - key: dataDichiarazione
+    page: 2
+    x: 100
+    y: 180
+    fontSize: 10

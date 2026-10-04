@@ -1,0 +1,61 @@
+package it.frank.conformita.core.dto;
+
+import it.frank.conformita.core.entity.DestinazioneUso;
+import it.frank.conformita.core.entity.SistemaDistribuzione;
+import it.frank.conformita.core.entity.StatoPratica;
+import it.frank.conformita.core.entity.TensioneImpianto;
+import it.frank.conformita.core.entity.TipoIntervento;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.util.List;
+
+public record PraticaDto(
+        Long id,
+        Instant createdAt,
+        Instant updatedAt,
+        StatoPratica stato,
+        String comuneImpianto,
+        String provincia,
+        String protocollo,
+        LocalDate dataProtocollo,
+        String descrizioneImpianto,
+        String committenteNome,
+        String committenteCodiceFiscale,
+        String indirizzoImpianto,
+        String indirizzoCommittente,
+        String proprietarioDescrizione,
+        String comune,
+        String cap,
+        TipoIntervento tipoIntervento,
+        DestinazioneUso destinazioneUso,
+        String altriUsi,
+        LocalDate dataInizio,
+        Double potenzaKw,
+        Double potenzaImpegnabileKw,
+        Double potenzaInstallataKw,
+        boolean fotovoltaico,
+        boolean altroIntervento,
+        TensioneImpianto tensione,
+        String tensioneNominale,
+        SistemaDistribuzione sistemaDistribuzione,
+        String normaTecnica,
+        boolean dichiaraProgetto,
+        boolean dichiaraNorma,
+        boolean dichiaraMateriali,
+        boolean dichiaraControlli,
+        boolean allegatoProgetto,
+        boolean allegatoMateriali,
+        boolean allegatoSchema,
+        String riferimentiPrecedenti,
+        LocalDate dataDichiarazione,
+        String responsabileTecnicoNome,
+        String descrizioneOpere,
+        boolean provaVistaSezioni,
+        boolean provaVistaBagno,
+        boolean provaVistaInterruttori,
+        String telefonoAssistenza,
+        String schemaAllegatoPath,
+        String schemaUnifilareJsonPath,
+        Long unifilareSchemaId,
+        List<MaterialeRigaDto> materiali,
+        List<VerificaRigaDto> verifiche) {}

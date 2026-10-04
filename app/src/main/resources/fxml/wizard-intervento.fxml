@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.frank.conformita.ui.WizardInterventoPanelController">
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+    </padding>
+    <Label styleClass="placeholder-title" text="Step 3 — Intervento e impianto" />
+    <GridPane hgap="12.0" vgap="12.0">
+        <Label text="Descrizione impianto" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextArea fx:id="descrizioneImpiantoArea" prefRowCount="3" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Tipo intervento" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="tipoInterventoCombo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <CheckBox fx:id="fotovoltaicoCheck" text="Fotovoltaico" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <CheckBox fx:id="altroInterventoCheck" text="Altro intervento" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="Destinazione d'uso" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <ComboBox fx:id="destinazioneUsoCombo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label text="Altri usi" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="altriUsiField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Label text="Data inizio" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <DatePicker fx:id="dataInizioPicker" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Label text="Potenza (kW)" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <TextField fx:id="potenzaKwField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Label text="Potenza impegnabile (kW)" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <TextField fx:id="potenzaImpegnabileField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Label text="Tensione" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <ComboBox fx:id="tensioneCombo" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Label text="Norma tecnica" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+        <TextField fx:id="normaTecnicaField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+    </GridPane>
+</VBox>

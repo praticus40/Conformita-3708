@@ -1,0 +1,61 @@
+{
+  "format": "conformita-unifilare",
+  "version": 1,
+  "layout": {
+    "width": 800,
+    "height": 520
+  },
+  "general": {
+    "label": "Generale",
+    "inAmps": 32,
+    "x": 400,
+    "y": 40
+  },
+  "busbar": {
+    "y": 120,
+    "x1": 80,
+    "x2": 720
+  },
+  "circuits": [
+    {
+      "id": "c1",
+      "label": "Linea Prese",
+      "inAmps": 16,
+      "differentialMa": 30,
+      "anchorX": 150,
+      "order": 0
+    },
+    {
+      "id": "c2",
+      "label": "Linea Luce",
+      "inAmps": 10,
+      "differentialMa": 30,
+      "anchorX": 290,
+      "order": 1
+    },
+    {
+      "id": "c3",
+      "label": "Linea P.cottura",
+      "inAmps": 25,
+      "differentialMa": 30,
+      "anchorX": 430,
+      "order": 2
+    },
+    {
+      "id": "c4",
+      "label": "Linea Cucina",
+      "inAmps": 16,
+      "differentialMa": 30,
+      "anchorX": 570,
+      "order": 3
+    },
+    {
+      "id": "c5",
+      "label": "Linea Condizionatore",
+      "inAmps": 16,
+      "differentialMa": 30,
+      "anchorX": 710,
+      "order": 4
+    }
+  ]
+}

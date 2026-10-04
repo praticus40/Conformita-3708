@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.frank.conformita.ui.WizardRelazioneTecnicaPanelController">
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+    </padding>
+    <Label styleClass="placeholder-title" text="Step 5 — Relazione tecnico-descrittiva" />
+    <GridPane hgap="12.0" vgap="12.0">
+        <Label text="Tensione nominale" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="tensioneNominaleField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Sistema distribuzione" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="sistemaDistribuzioneCombo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Potenza installata (kW)" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="potenzaInstallataField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Descrizione opere" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextArea fx:id="descrizioneOpereArea" prefRowCount="8" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </GridPane>
+</VBox>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.frank.conformita.ui.MainController">
+    <top>
+        <VBox spacing="0.0">
+            <MenuBar>
+                <Menu text="File">
+                    <MenuItem fx:id="menuFileNew" mnemonicParsing="false" text="Nuova pratica…" />
+                    <MenuItem fx:id="menuFileOpen" mnemonicParsing="false" text="Apri…" />
+                    <MenuItem fx:id="menuFileExport" mnemonicParsing="false" text="Esporta pacchetto…" />
+                    <SeparatorMenuItem />
+                    <MenuItem fx:id="menuFileExit" mnemonicParsing="false" text="Esci" />
+                </Menu>
+                <Menu text="Pratica">
+                    <MenuItem fx:id="menuPracticeDuplicate" mnemonicParsing="false" text="Duplica" />
+                    <MenuItem fx:id="menuPracticeArchive" mnemonicParsing="false" text="Archivia" />
+                </Menu>
+                <Menu text="Visualizza">
+                    <MenuItem fx:id="menuViewValidation" mnemonicParsing="false" text="Nascondi pannello validazione" />
+                    <MenuItem fx:id="menuViewTheme" mnemonicParsing="false" text="Tema scuro" />
+                </Menu>
+                <Menu text="Aiuto">
+                    <MenuItem fx:id="menuHelpAbout" mnemonicParsing="false" text="Informazioni su…" />
+                </Menu>
+            </MenuBar>
+            <ToolBar>
+                <Button fx:id="toolbarSave" mnemonicParsing="false" text="Salva" />
+                <Button fx:id="toolbarValidate" mnemonicParsing="false" text="Valida" />
+                <Button fx:id="toolbarPreview" mnemonicParsing="false" text="Anteprima PDF" />
+                <Button fx:id="toolbarExport" mnemonicParsing="false" text="Esporta PDF" />
+            </ToolBar>
+        </VBox>
+    </top>
+    <center>
+        <HBox spacing="0.0">
+            <ListView fx:id="sidebarList" prefWidth="240.0" styleClass="sidebar-list" />
+            <StackPane HBox.hgrow="ALWAYS" styleClass="center-stack">
+                <VBox fx:id="wizardContainer" spacing="12.0" visible="false" managed="false" styleClass="wizard-container">
+                    <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                    </padding>
+                    <Button fx:id="wizardBackButton" mnemonicParsing="false" text="← Torna a elenco pratiche" />
+                    <HBox spacing="6.0" styleClass="wizard-stepper">
+                        <ToggleButton fx:id="step1" maxWidth="1.7976931348623157E308" text="1" HBox.hgrow="ALWAYS" />
+                        <ToggleButton fx:id="step2" maxWidth="1.7976931348623157E308" text="2" HBox.hgrow="ALWAYS" />
+                        <ToggleButton fx:id="step3" maxWidth="1.7976931348623157E308" text="3" HBox.hgrow="ALWAYS" />
+                        <ToggleButton fx:id="step4" maxWidth="1.7976931348623157E308" text="4" HBox.hgrow="ALWAYS" />
+                        <ToggleButton fx:id="step5" maxWidth="1.7976931348623157E308" text="5" HBox.hgrow="ALWAYS" />
+                        <ToggleButton fx:id="step6" maxWidth="1.7976931348623157E308" text="6" HBox.hgrow="ALWAYS" />
+                        <ToggleButton fx:id="step7" maxWidth="1.7976931348623157E308" text="7" HBox.hgrow="ALWAYS" />
+                        <ToggleButton fx:id="step8" maxWidth="1.7976931348623157E308" text="8" HBox.hgrow="ALWAYS" />
+                        <ToggleButton fx:id="step9" maxWidth="1.7976931348623157E308" text="9" HBox.hgrow="ALWAYS" />
+                    </HBox>
+                    <StackPane fx:id="wizardStepContentPane" VBox.vgrow="ALWAYS" styleClass="wizard-step-content" />
+                </VBox>
+                <StackPane fx:id="sectionContentPane" />
+            </StackPane>
+            <VBox fx:id="validationPanel" prefWidth="320.0" spacing="8.0" styleClass="validation-panel">
+                <padding>
+                    <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                </padding>
+                <Label styleClass="validation-title" text="Validazione" />
+                <Label fx:id="validationEmptyLabel" styleClass="validation-empty" text="Nessun controllo eseguito" wrapText="true" />
+                <ListView fx:id="validationIssuesList" VBox.vgrow="ALWAYS" />
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox spacing="16.0" styleClass="status-bar">
+            <padding>
+                <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+            </padding>
+            <Label fx:id="statusReady" text="Pronto" />
+            <Label fx:id="statusApp" text="conformita-3708 skeleton" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="statusDataPath" text="./data" />
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.frank.conformita.ui.WizardVerifichePanelController">
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+    </padding>
+    <Label styleClass="placeholder-title" text="Step 7 — Verifiche e prove" />
+    <Label text="Prove a vista" />
+    <CheckBox fx:id="provaSezioniCheck" text="Continuità protezioni / sezioni" />
+    <CheckBox fx:id="provaBagnoCheck" text="Impianto bagno / zone umide" />
+    <CheckBox fx:id="provaInterruttoriCheck" text="Interruttori differenziali" />
+    <Label text="Prove strumentali" />
+    <HBox spacing="8.0">
+        <Button fx:id="btnAggiungi" text="Aggiungi prova" />
+        <Button fx:id="btnRimuovi" text="Rimuovi selezionata" />
+    </HBox>
+    <TableView fx:id="verificheTable" editable="true" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colTipo" prefWidth="160.0" text="Tipo prova" />
+            <TableColumn fx:id="colValore" prefWidth="120.0" text="Valore" />
+            <TableColumn fx:id="colMarca" prefWidth="120.0" text="Marca strumento" />
+            <TableColumn fx:id="colModelloStrumento" prefWidth="120.0" text="Modello" />
+        </columns>
+    </TableView>
+</VBox>

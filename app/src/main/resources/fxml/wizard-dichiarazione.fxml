@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.frank.conformita.ui.WizardDichiarazionePanelController">
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+    </padding>
+    <Label styleClass="placeholder-title" text="Step 4 — Dichiarazione Di.Co (art. 6)" />
+    <GridPane hgap="12.0" vgap="8.0">
+        <CheckBox fx:id="dichiaraProgettoCheck" text="Conformità al progetto" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+        <CheckBox fx:id="dichiaraNormaCheck" text="Conformità norme tecniche" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+        <CheckBox fx:id="dichiaraMaterialiCheck" text="Materiali conformi" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+        <CheckBox fx:id="dichiaraControlliCheck" text="Controlli eseguiti" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+        <CheckBox fx:id="allegatoProgettoCheck" text="Allegato progetto" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+        <CheckBox fx:id="allegatoMaterialiCheck" text="Allegato relazione materiali" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+        <CheckBox fx:id="allegatoSchemaCheck" text="Allegato schema" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+        <Label text="Riferimenti precedenti" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <TextArea fx:id="riferimentiField" prefRowCount="2" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Label text="Data dichiarazione" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <DatePicker fx:id="dataDichiarazionePicker" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Label text="Responsabile tecnico (firma)" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <TextField fx:id="responsabileTecnicoField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+    </GridPane>
+</VBox>

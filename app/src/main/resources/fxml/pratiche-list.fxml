@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.frank.conformita.ui.PratichePanelController">
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+    </padding>
+    <Label styleClass="placeholder-title" text="Pratiche" />
+    <ToolBar>
+        <Button fx:id="btnNuova" mnemonicParsing="false" text="Nuova" />
+        <Button fx:id="btnElimina" mnemonicParsing="false" text="Elimina" />
+        <Button fx:id="btnEsporta" mnemonicParsing="false" text="Esporta" />
+        <Button fx:id="btnDettaglio" mnemonicParsing="false" text="Dettaglio" />
+        <Button fx:id="btnAggiorna" mnemonicParsing="false" text="Aggiorna" />
+    </ToolBar>
+    <Label text="Seleziona una riga e usa Dettaglio, oppure doppio clic per aprire il wizard." wrapText="true" />
+    <TableView fx:id="praticheTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colCommittente" prefWidth="160.0" text="Committente" />
+            <TableColumn fx:id="colIndirizzo" prefWidth="220.0" text="Indirizzo" />
+            <TableColumn fx:id="colTipo" prefWidth="120.0" text="Intervento" />
+            <TableColumn fx:id="colAggiornata" prefWidth="140.0" text="Aggiornata" />
+        </columns>
+    </TableView>
+</VBox>

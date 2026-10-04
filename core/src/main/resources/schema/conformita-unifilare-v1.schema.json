@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://conformita.local/schema/conformita-unifilare-v1.schema.json",
+  "title": "Schema unifilare conformita-unifilare v1",
+  "type": "object",
+  "required": ["format", "version", "layout", "general", "busbar", "circuits"],
+  "properties": {
+    "format": { "const": "conformita-unifilare" },
+    "version": { "const": 1 },
+    "layout": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "number", "minimum": 200 },
+        "height": { "type": "number", "minimum": 200 }
+      }
+    },
+    "general": {
+      "type": "object",
+      "required": ["label", "inAmps", "x", "y"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "inAmps": { "type": "integer", "minimum": 1 },
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      }
+    },
+    "busbar": {
+      "type": "object",
+      "required": ["y", "x1", "x2"],
+      "properties": {
+        "y": { "type": "number" },
+        "x1": { "type": "number" },
+        "x2": { "type": "number" }
+      }
+    },
+    "circuits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "inAmps", "anchorX", "order"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "inAmps": { "type": "integer", "minimum": 1 },
+          "differentialMa": { "type": "integer", "minimum": 0 },
+          "anchorX": { "type": "number" },
+          "order": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

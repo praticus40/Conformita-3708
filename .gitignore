@@ -1,0 +1,11 @@
+.gradle/
+build/
+out/
+.idea/
+*.iml
+.vscode/settings.json
+data/
+**/build/
+.vscode/
+.idea/
+$null
