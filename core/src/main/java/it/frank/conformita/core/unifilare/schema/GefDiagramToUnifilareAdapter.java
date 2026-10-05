@@ -38,7 +38,7 @@ public final class GefDiagramToUnifilareAdapter {
             c.setLabel(node.getLabel() != null ? node.getLabel() : "Linea");
             c.setInAmps(parseInt(node.getProperties().get("inAmps"), 16));
             c.setDifferentialMa(parseInt(node.getProperties().get("differentialMa"), 30));
-            c.setAnchorX(node.getX());
+            c.setAnchorX(node.getX() + node.getWidth() / 2);
             c.setOrder(order++);
             doc.getCircuits().add(c);
         }
@@ -50,6 +50,14 @@ public final class GefDiagramToUnifilareAdapter {
                     doc.getGeneral().setInAmps(parseInt(g.getProperties().get("inAmps"), 32));
                     doc.getGeneral().setX(g.getX());
                     doc.getGeneral().setY(g.getY());
+                });
+        document.getDiagram().getNodes().stream()
+                .filter(n -> "busbar".equals(n.getType()))
+                .findFirst()
+                .ifPresent(b -> {
+                    doc.getBusbar().setY(b.getY() + b.getHeight() / 2);
+                    doc.getBusbar().setX1(b.getX());
+                    doc.getBusbar().setX2(b.getX() + b.getWidth());
                 });
         doc.getLayout().setWidth(document.getDiagram().getCanvasWidth());
         doc.getLayout().setHeight(document.getDiagram().getCanvasHeight());

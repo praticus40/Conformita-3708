@@ -1,4 +1,4 @@
-package it.frank.conformita.gef;
+package it.frank.conformita.core.unifilare.schema.editor;
 
 import java.nio.file.Path;
 import java.util.HashMap;
@@ -47,8 +47,18 @@ public final class SchemaEditorCliArgs {
         int width = parseInt(map.get("--width"), 1200);
         int height = parseInt(map.get("--height"), 800);
         boolean exitOnClose = !"false".equalsIgnoreCase(map.get("--exit-on-close"));
+        Path dataDirPath;
+        try {
+            dataDirPath = Path.of(dataDir).toAbsolutePath().normalize();
+        } catch (Exception e) {
+            throw new IllegalArgumentException(
+                    "--data-dir non valido: \""
+                            + dataDir
+                            + "\" (usare un percorso reale, non il placeholder <data> della documentazione)",
+                    e);
+        }
         return new SchemaEditorCliArgs(
-                Path.of(dataDir).toAbsolutePath().normalize(),
+                dataDirPath,
                 Long.parseLong(schemaId),
                 x,
                 y,

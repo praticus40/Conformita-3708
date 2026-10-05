@@ -1,4 +1,4 @@
-package it.frank.conformita.gef.editor;
+package it.frank.conformita.core.unifilare.schema.editor;
 
 import it.frank.conformita.core.unifilare.schema.GefDiagramModel;
 import it.frank.conformita.core.unifilare.schema.UnifilareSchemaDocumentV2;

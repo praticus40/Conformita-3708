@@ -1,5 +1,6 @@
 package it.frank.conformita.gef;
 
+import it.frank.conformita.core.unifilare.schema.editor.SchemaEditorCliArgs;
 import it.frank.conformita.gef.editor.SchemaEditorShell;
 import org.eclipse.swt.widgets.Display;
 
